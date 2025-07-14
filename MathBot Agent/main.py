@@ -25,43 +25,17 @@ config=RunConfig(
     tracing_disabled=True,
 )
 
-@FunctionTool()
-async def getweather(city:str) -> str:
-   """fetch the weather for a given loaction
-   Args:
-   city:The city to fetch the weather for."""
-   return f"weather sunny in {city}"
-
-
-@FunctionTool(
-)
-async def getresturant(name:str) -> str:
-   """fetch the name for a given resturant
-   Args:
-   city:The name to fetch the location for."""
-   return f"weather sunny in {name}"
-@FunctionTool(
-)
-async def getlocation(name:str) -> str:
-   """fetch the name for a given resturant
-   Args:
-   city:The name to fetch the location for."""
-   return f"weather sunny in {name}"
 
 agent=Agent(
-   name="Function Calling",
-   instructions="Tell about the function tools calling",
-   tools=[getweather,getresturant,getlocation],
+   name="Math Bot",
+   instructions="Solve All Math Problems",
 )
-for tool in agent.tools:
-       print(tool.name)
+
 
 result = Runner.run_sync(
-    agent=agent,
-    input="According to the weather of city tell me the restaurant available on good location",
+      agent,
+    input="what is 409*23?",
     run_config=config
 )
 
-print(result.final_output)       
-       
-
+print(result.final_output) 
