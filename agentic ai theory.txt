@@ -1,0 +1,234 @@
+difference between agentic ai and generative ai
+In generative ai human intervention is compulsary like in chatgpt you must have to given input than it will give output to you
+but in agentic ai it autonomously(khudmukhtar hai) work means it take all action but it self
+Agenti AI
+it is an autonomous machine language that can understand think and take action
+the word agetic means 'Virtual Human'
+like human understand think and make decision agentic ai is same like this
+Agentic Ai has been achieved in november 2022 with the launched of chat gpt
+
+what is uv in agentic ai
+uv ek fast python package manager hai like pip and npm
+🧠 (Universal Verifier)?
+In the Agentic AI framework, where multiple intelligent agents interact, take actions, 
+or generate results, a UV is like a referee or quality checker that:
+
+✅ Verifies if the output from agents is correct, safe, or aligned with goals.
+
+🛡️ Prevents unsafe or unintended actions by AI agents.
+
+📊 Evaluates if the AI's decisions meet expectations or policies.
+A QA supervisor in an automated company:
+
+Agents = employees doing tasks
+
+UV = supervisor checking if work is done properly
+
+1. uv managed dependencies 
+ for example
+ 🧠 Think of UV Like a Referee 👨‍⚖️
+A referee (UV) needs:
+
+📋 Rules book → tells what's right or wrong
+
+📺 Camera footage → to see what's happening
+
+🗣️ Player input → to understand actions taken
+
+These are its dependencies — the things it depends on to verify if everything is working correctly.
+
+2. virtual enviroment create karta hai.
+for example
+Imagine you’re testing a robot in a glass room.
+It thinks it’s in the real world, but:
+
+You’re watching it.
+
+You can control everything inside.
+
+It can’t break anything outside.
+
+That glass room = virtual environment.
+
+3. uv initialized project
+4. uv CLI(command line tools)  tools which run on terminal like npm pip or git uv in tools ky zariya fast or 
+   simple tarikay sy kam karta hai
+
+5. In uv backend rust has been used
+6. seperate tools ky bajay ik hi tool use karta hai  
+
+🌐 What is OpenRouter?
+OpenRouter is like a universal gateway or hub that lets you easily
+ connect to many different AI models from various companies — using one API.
+
+🧠 Think of it like this:
+Imagine you’re in a room with:
+
+ChatGPT by OpenAI
+
+Claude by Anthropic
+
+Gemini by Google
+
+Mistral, Mixtral, and others
+
+Instead of talking to each one separately using different tools and APIs, 
+OpenRouter lets you talk to all of them through one door.
+✅ One setup
+✅ Multiple LLMs
+✅ Easier switching and testing
+
+what is litellm
+⚙️ 2. LiteLLM (Think: Your Own Kitchen 👨‍🍳)
+🔹 A tool that you install yourself, and it acts like a brain that routes your AI calls wherever you want.
+
+✅ You do:
+Install LiteLLM using pip install litellm
+
+Connect it to different models (OpenAI, Claude, etc.) by setting your own keys
+
+Run a local server (your own API)
+
+Write rules like: "Use Claude for summaries, GPT for code, and fallback to Mistral if OpenAI fails"
+
+✅ LiteLLM does:
+Send your request to the best model (based on your rules)
+
+Track costs and speed
+
+Let you test LLMs locally
+
+Keep your data private
+
+🎯 Use LiteLLM if:
+You want full control
+
+You're working on a project or app
+
+You care about cost, speed, or privacy
+
+Chainlit
+chainlit help karta ha large models llms banany ma
+
+🤖 What is an Agent?
+An AI Agent is like a smart assistant that can:
+
+✅ Understand a goal or instruction
+
+✅ Think about what steps it should take
+
+✅ Take action (not just reply with text)
+
+✅ Learn from results and try again if needed
+
+🎯 Real-Life Analogy
+Imagine you have a personal assistant named Sara.
+
+You say:
+"Sara, book a flight from Karachi to Lahore under Rs. 30,000."
+
+Sara:
+
+Understands your request (Goal)
+
+Opens travel websites (Takes action)
+
+Finds flights (Thinks)
+
+Picks the best one (Decides)
+
+Books it (Acts)
+
+That’s what an AI agent tries to do — but with code + LLMs.
+
+🧠 What is an LLM (Large Language Model)?
+An LLM is a very smart text-based AI brain trained to:
+
+Understand language (like Urdu, English)
+
+Answer questions
+
+Write code, essays, poems, emails
+
+Reason over tasks
+
+🧪 Examples of LLMs:
+ChatGPT (OpenAI)
+
+Claude (Anthropic)
+
+Gemini (Google)
+
+LLaMA (Meta)
+
+Mistral, Mixtral, Groq, etc.
+
+These models are like the thinking part of the agent.
+
+🧩 So… How Do Agent + LLM Work Together?
+Here’s the flow:
+
+bash
+Copy
+Edit
+You give a goal ➝ Agent receives it ➝ Agent asks LLM for help ➝ 
+LLM replies ➝ Agent decides what to do ➝ (maybe repeat) ➝ Done!
+Component	Role
+🧠 LLM	Brain: understands and generates answers
+🤖 Agent	Controller: plans, asks, acts, decides
+🧰 Tools	Things the agent uses (web, calculator, files, etc.)
+
+📌 Example (AI Agent in Action):
+Goal: “Summarize this PDF and email it to my friend.”
+
+Agent:
+
+Reads the PDF (Tool)
+
+Uses LLM to write a summary
+
+Uses email tool to send it
+
+You didn’t give step-by-step instructions.
+It figured it out — just like a human assistant would.
+
+💡 Think of it Like Building a Smart Team
+🧠 LLM = Smart brain
+
+🛠 LangChain = Planning + action-taking
+
+🖼️ Chainlit = Chat window or UI
+
+🧭 Agent SDK = Pre-made tools for creating AI assistants
+
+🔀 OpenRouter / LiteLLM = How your agent connects to different AI models
+
+🐝 Swarm = Many agents working together on one project
+
+jab kisi function ky sath @ laga dia jata hai tu wo function tool ban jata hai 
+
+Tools are used for the enhncement of llm tools are used to make llm more efficient
+
+Structured Output 
+
+pydantic ik library hai python ki jis ko use karky hum structured data banaty ha data ka
+ mtlb data ko validate kartay hai ky wo string hu 
+integer hu ya float
+
+
+
+ 
+funtion name overridding
+@FunctionTool(
+      # name_override='fetch_weather',
+      # description_override='The weather of city is good'
+)
+async def getweather(city:str) -> str:
+   """fetch the weather for a given loaction
+   Args:
+   city:The city to fetch the weather for."""
+   r
+
+
+Context Management
+Local Context
